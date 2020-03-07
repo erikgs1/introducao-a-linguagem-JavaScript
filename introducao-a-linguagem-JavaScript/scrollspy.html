@@ -30,7 +30,7 @@
                     <h3 id="c3">Capítulo 3</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec arcu finibus, tempor elit at, maximus neque. Nulla sodales vestibulum erat, nec bibendum est lobortis scelerisque. Donec odio ligula, mattis vel bibendum non, aliquam vel ex. Nulla pellentesque porta faucibus. Pellentesque vel felis non dui commodo blandit. Vestibulum diam erat, bibendum at rhoncus eu, semper nec eros. Cras libero lacus, congue et justo et, consectetur feugiat odio. Aliquam fermentum egestas neque in finibus. Quisque quis mi justo. Quisque in ipsum et mi tristique egestas. Suspendisse quis consequat odio. In condimentum tincidunt elit. Etiam lacus nulla, rhoncus sed feugiat id, feugiat ut lacus. Aliquam tristique eu dolor et gravida.</p>
                     <h3 id="c4">Capítulo 4</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec arcu finibus, tempor elit at, maximus neque. Nulla sodales vestibulum erat, nec bibendum est lobortis scelerisque. Donec odio ligula, mattis vel bibendum non, aliquam vel ex. Nulla pellentesque porta faucibus. Pellentesque vel felis non dui commodo blandit. Vestibulum diam erat, bibendum at rhoncus eu, semper nec eros. Cras libero lacus, congue et justo et, consectetur feugiat odio. Aliquam fermentum egestas neque in finibus. Quisque quis mi justo. Quisque in ipsum et mi tristique egestas. Suspendisse quis consequat odio. In condimentum tincidunt elit. Etiam lacus nulla, rhoncus sed feugiat id, feugiat ut lacus. Aliquam tristique eu dolor et gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec arcu finibus, tempor elit at, maximus neque. Nulla sodales vestibulum erat, nec bibendum est lobortis scelerisque. Donec odio ligula, mattis vel bibendum non, aliquam vel ex. Nulla pellentesque porta faucibus. Pellentesque vel felis non dui commodo blandit. Vestibulum diam erat, bibendum at rhoncus eu, semper nec eros. Cras libero lacus, congue et justo et, consectetur feugiat odio. Aliquam fermentum egestas neque in finibus. Quisque quis mi justo. Quisque in ipsum et mi tristique egestas. Suspendisse quis consequat odio. In condimentum tincidunt elit. Etiam lacus nulla, rhoncus sed feugiat id, feugiat ut lacus. Aliquam tristique eu dolor et gravida.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec arcu finibus, tempor elit at, maximus neque. Nulla sodales vestibulum erat, nec bibendum est lobortis scelerisque. Donec odio ligula, mattis vel bibendum non, aliquam vel ex. Nulla pellentesque porta faucibus. Pellentesque vel felis non dui commodo blandit. Vestibulum diam erat, bibendum at rhoncus eu, semper nec eros. Cras libero lacus, congue et justo et, consectetur feugiat odio. Aliquam fermentum egestas neque in finibus. Quisque quis mi justo. Quisque in ipsum et mi tristique egestas. Suspendisse quis consequat odio. In condimentum tincidunt elit. Etiam lacus nulla, rhoncus sed feugiat id, feugiat ut lacus. Aliquam tristique eu dolor et gravida.</p>
                     <h3 id="c5">Capítulo 5</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec arcu finibus, tempor elit at, maximus neque. Nulla sodales vestibulum erat, nec bibendum est lobortis scelerisque. Donec odio ligula, mattis vel bibendum non, aliquam vel ex. Nulla pellentesque porta faucibus. Pellentesque vel felis non dui commodo blandit. Vestibulum diam erat, bibendum at rhoncus eu, semper nec eros. Cras libero lacus, congue et justo et, consectetur feugiat odio. Aliquam fermentum egestas neque in finibus. Quisque quis mi justo. Quisque in ipsum et mi tristique egestas. Suspendisse quis consequat odio. In condimentum tincidunt elit. Etiam lacus nulla, rhoncus sed feugiat id, feugiat ut lacus. Aliquam tristique eu dolor et gravida.</p>
                 </div>
@@ -42,7 +42,13 @@
         <script src="public/js/jquery.js"></script>
         <script src="public/js/bootstrap.bundle.min.js"></script>
         <script type="text/javascript">
-            $('#caixaLivro').scrollspy({target: '#Livro'})
+            $('#conteudoModal').on('show.bs.modal', function(event){
+                var button = $(event.relatedTarget);
+                var recipient = button.data('nome');
+                var modal = $(this)
+                modal.find('.modal-title').text('Mensagem para' + recipient);
+                modal.find('.modal-body input').val(recipient);
+            });
         </script>
     </footer>
 </body>
