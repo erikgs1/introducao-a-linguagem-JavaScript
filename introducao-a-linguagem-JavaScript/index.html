@@ -12,17 +12,17 @@
     <div class="container">
         <h1>Modal</h1>
         
-        <button class="btn btn-secondary" data-toggle="modal" data-target="#conteudoModal">
+        <button class="btn btn-secondary" data-nome="Diego" data-toggle="modal" data-target="#conteudoModal">
             Mensagem para Diego
         </button>
 
-        <button class="btn btn-secondary" data-toggle="modal" data-target="#conteudoModal">
+        <button class="btn btn-secondary" data-nome="Alfahelix" data-toggle="modal" data-target="#conteudoModal">
             Mensagem para Alfahelix
         </button>
         
         <!-- Modal -->
         <div id="conteudoModal" class="modal fade">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <!-- Título -->
                     <div class="modal-header">
@@ -35,12 +35,11 @@
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-6">
-                                Texto do meu modal parte 1.
+                                <span>Destinatário: </span>
                             </div>
                             <div class="col-6">
-                                Texto do meu modal parte 2.
+                                <input type="text" name="para" class="form-control">
                             </div>
-                        </div>
                     </div>
                     <!-- Rodapé -->
                     <div class="modal-footer">
@@ -51,5 +50,11 @@
         </div>
 
     </div>
+    <footer>
+        <!-- JS -->
+        <script src="public/js/jquery.js"></script>
+        <script src="public/js/bootstrap.bundle.min.js"></script>
+        <script type="text/javascript"></script>
+    </footer>
 </body>
 </html>
