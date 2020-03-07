@@ -5,18 +5,24 @@
     <meta charset="utf-8">
 
     <!-- Css -->
-    <link rel="stylesheet" href="public/css/boodstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
     <div class="container">
         <h1>Modal</h1>
         
-        <button class="btn btn-secondary" data-toggle="modal" data-target="#conteudoModal">Ativar modal</button>
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#conteudoModal">
+            Mensagem para Diego
+        </button>
+
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#conteudoModal">
+            Mensagem para Alfahelix
+        </button>
         
         <!-- Modal -->
         <div id="conteudoModal" class="modal fade">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <!-- Título -->
                     <div class="modal-header">
@@ -27,7 +33,14 @@
                     </div>
                     <!-- Conteúdo -->
                     <div class="modal-body">
-                        Texto do meu modal.
+                        <div class="row">
+                            <div class="col-6">
+                                Texto do meu modal parte 1.
+                            </div>
+                            <div class="col-6">
+                                Texto do meu modal parte 2.
+                            </div>
+                        </div>
                     </div>
                     <!-- Rodapé -->
                     <div class="modal-footer">
