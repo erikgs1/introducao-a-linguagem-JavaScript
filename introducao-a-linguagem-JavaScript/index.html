@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title>Componentes</title>
+    <meta charset="utf-8">
+
+    <!-- Css -->
+    <link rel="stylesheet" href="public/css/boodstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Modal</h1>
+        
+        <button class="btn btn-secondary" data-toggle="modal" data-target="#conteudoModal">Ativar modal</button>
+        
+        <!-- Modal -->
+        <div id="conteudoModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Título -->
+                    <div class="modal-header">
+                        <h4>Meu modal</h4>
+                        <button class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <!-- Conteúdo -->
+                    <div class="modal-body">
+                        Texto do meu modal.
+                    </div>
+                    <!-- Rodapé -->
+                    <div class="modal-footer">
+                        <button class="btn ntn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
